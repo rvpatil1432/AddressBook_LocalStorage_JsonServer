@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/addPerson.css">
+    <title>Address Book </title>
+    <script type="text/JavaScript" src="../js/addressbook.js"></script>
+   <!-- <script type="text/JavaScript" src="../js/Person.js"></script>-->
+    <script type="text/JavaScript" src="../js/site_properties.js"></script>
+    <script type="text/JavaScript" src="../js/AjaxService.js"></script>
+    <script type="text/JavaScript" src="../js/utility.js"></script>
+</head>
+
+<body>
+    <!-- UC1 AddressBook Form UI-->
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/addressbooklogo.png">
+            <div>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-content">
+        <!-- UC2 Add form header -->
+       
+        <form class="form" action="#" onsubmit="save(event);return false" onreset="resetForm()">
+            <div class="form-head">
+                <div class="form-heading">PERSON ADDRESS FORM</div>
+                <a href="./home.html" class="cancel-button">
+                    <img src="../assets/images/close.png" alt="" width="40px" height="40px"></a>
+            </div>
+            <!-- UC3 Form input field -->
+            <div class="form-start">
+                <div class="row-content">
+                    <label class="label text" for="name">Full Name</label><br>
+                    <input class="input" type="text" id="name" name="name" placeholder=" " required>
+                    <error-output class="text-error"></error-output>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="phone">Phone Number</label><br>
+                    <input class="input" type="tel " id="phone" name="phone" placeholder=" " required>
+                    <error-output class="phone-error"></error-output>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="address">Address</label><br>
+                    <textarea id="address" class="input" name="address" placeholder=" " style="height: 100px; "></textarea>
+                    <error-output class="address-error"></error-output>
+                </div>
+                <div class="column-content">
+                    <div>
+                        <label class="label text" for="city">City</label><br>
+                        <select id="city" name="city">
+                        <option aria-placeholder="Select City">Select City</option>
+                        <option value="Beed">Beed</option>
+                        <option value="Kalyan">Kalyan</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Kochi">Kochi</option>
+                        <option value="Latur">Latur</option>
+                        <option value="Pune">Pune</option>
+                    </select>
+                    </div>
+                    <div>
+                        <label class="label text" for="state">State</label><br>
+                        <select id="state" name="state ">
+                            <option value="">Select State</option>
+    
+                            <option value="Maharastra">Maharastra</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="West Bengal">West Bengal</option>
+                    </select>
+                    </div>
+                    <div>
+                        <label class="label text zip-text" for="zipcode ">Zipcode</label></br>
+                        <input class="input" id="zipcode" name="zipcode"></input>
+                    </div>
+                </div>
+
+                <div class="buttonParent">
+                    <div class="">
+                        <button type="submit" class="button addButton" id="addButton">Add</button>
+                        <button type="reset" class=" button resetButton">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
